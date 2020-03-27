@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Translation\Translator;
 use Core\Localization\Middleware;
 use Core\Localization\LanguageRepository;
-use Core\Localization\NegotiatorInterface;
+use Core\Localization\Contracts\NegotiatorInterface;
 use Core\Localization\LanguageNegotiator;
 
 class LocalizationServiceProvider extends ServiceProvider
@@ -39,7 +39,7 @@ class LocalizationServiceProvider extends ServiceProvider
     /** Get default locale. */
     protected function getDefaultLocale()
     {
-        return $this->app->config->get('locale.default');
+        return $this->app->config->get('app.locale');
     }
 
     /** Lists supported locales. */

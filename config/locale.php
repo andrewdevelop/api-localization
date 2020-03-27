@@ -1,6 +1,6 @@
 <?php 
 
 return [
-	'default' => env('LOCALE', 'en'),
-	'supported' => env('LOCALES', 'en,ar,ku'),
+	'default' => env('APP_LOCALE', 'en'),
+	'supported' => env('APP_LOCALES', 'en,ar,ku'),
 ];
